@@ -19,3 +19,18 @@ export const parseDayTwo = (input: string) => {
 
   return rows.map((r) => r.split(' ').map(Number));
 };
+
+export const parseDayFive = (input: string) => {
+  const parsed = input.split('\n');
+  const emptyIndex = parsed.findIndex((v) => v === '');
+  return [
+    parsed.slice(0, emptyIndex).map((v) => {
+      const splitted = v.split('|');
+      return {
+        from: Number(splitted[0]),
+        to: Number(splitted[1]),
+      };
+    }),
+    parsed.slice(emptyIndex + 1).map((row) => row.split(',').map(Number)),
+  ] as const;
+};

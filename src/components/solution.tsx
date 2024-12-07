@@ -48,7 +48,7 @@ export default function Solution({
       <Tabs data={tabs} value={tab} onSelect={setTab} />
       <form
         onSubmit={form.handleSubmit(handleSubmit)}
-        className="flex w-full flex-col lg:flex-row"
+        className="flex w-full flex-col lg:flex-row h-full"
       >
         <div className="card bg-base-300 w-full mr-4 rounded-box grid flex-grow place-items-center">
           <textarea

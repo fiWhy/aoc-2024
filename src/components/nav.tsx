@@ -15,6 +15,9 @@ export default function Nav() {
       <Link className="btn btn-ghost text-xl" href="/day-four">
         Day 4
       </Link>
+      <Link className="btn btn-ghost text-xl" href="/day-five">
+        Day 5
+      </Link>
     </div>
   );
 }
